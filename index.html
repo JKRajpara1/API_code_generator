@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API_Code_Generator</title>
+    <link rel="icon" href="Marvel.jpg">
+    <style>
+        body {
+            background-color: azure;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .input-field {
+            margin-left: 10px;
+            height: 28px;
+            width: 300px;
+        }
+
+        .textarea-field {
+            margin-left: 10px;
+            height: 100px;
+            width: 300px;
+            resize: vertical;
+        }
+
+        .margin-left {
+            margin-left: 10px;
+        }
+
+        #codeSnippet {
+            margin-top: 20px;
+            margin-right: 20px;
+            color: white;
+            width: 41%;
+            position: absolute;
+            left: 29%;
+            padding: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <select id="language" class="margin-left input-field">
+            <option value="javascript">Javascript</option>
+            <option value="python">Python</option>
+        </select>
+        <select id="method" class="margin-left input-field">
+            <option value="get" selected>GET</option>
+            <option value="post">POST</option>
+        </select>
+        <textarea id="postBody" rows="4" placeholder="POST Body" class="margin-left textarea-field"
+            style="display: none;"></textarea>
+        <input type="text" id="url" placeholder="API URL" class="margin-left input-field">
+        <select id="authentication" class="margin-left input-field">
+            <option value="noAuth" selected>noAuth</option>
+            <option value="bearer">Bearer</option>
+        </select>
+        <textarea id="apiToken" rows="4" placeholder="Bearer Token" class="margin-left textarea-field"
+            style="display: none;"></textarea>
+        <button id="send" class="margin-left">Send</button>
+    </div>
+    <pre id="codeSnippet"></pre>
+    <script src="index.js"></script>
+</body>
+
+</html>
